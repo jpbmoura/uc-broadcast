@@ -1,0 +1,10 @@
+rules_version = '2';
+
+// Placeholder: nega todo acesso. As regras reais de isolamento entre clientes serão escritas depois.
+service cloud.firestore {
+  match /databases/{database}/documents {
+    match /{document=**} {
+      allow read, write: if false;
+    }
+  }
+}
