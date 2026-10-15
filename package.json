@@ -4,11 +4,13 @@
   "type": "module",
   "scripts": {
     "emulators": "firebase emulators:start",
-    "test:rules": "firebase emulators:exec --only firestore \"vitest run --dir tests/rules\""
+    "test:rules": "firebase emulators:exec --only firestore \"vitest run --dir tests/rules --no-file-parallelism\""
   },
   "devDependencies": {
     "@firebase/rules-unit-testing": "^5.0.2",
+    "@types/node": "^26.6.5",
     "firebase": "^12.19.0",
+    "firebase-tools": "^15.34.0",
     "vitest": "^5.0.5"
   }
 }
