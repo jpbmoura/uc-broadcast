@@ -13,30 +13,32 @@ export const BroadcastPage = () => {
   const { data: contacts, loading, error } = useContacts(uid, connection.id);
 
   return (
-    <div className="grid gap-6 lg:grid-cols-2">
-      <ListState
-        loading={loading}
-        error={error}
-        isEmpty={contacts.length === 0}
-        empty={
-          <EmptyState
-            icon={<PeopleOutlinedIcon fontSize="large" />}
-            title="Nenhum contato nesta conexão"
-            description="Cadastre contatos antes de enviar mensagens."
-            action={
-              <Button
-                component={RouterLink}
-                to="../contacts"
-                variant="outlined"
-              >
-                Ir para Contatos
-              </Button>
-            }
-          />
-        }
-      >
-        <MessageComposer contacts={contacts} />
-      </ListState>
+    <div className="flex flex-row *:flex-col gap-6">
+      <div className="flex flex-col gap-4 w-7/12">
+        <ListState
+          loading={loading}
+          error={error}
+          isEmpty={contacts.length === 0}
+          empty={
+            <EmptyState
+              icon={<PeopleOutlinedIcon fontSize="large" />}
+              title="Nenhum contato nesta conexão"
+              description="Cadastre contatos antes de enviar mensagens."
+              action={
+                <Button
+                  component={RouterLink}
+                  to="../contacts"
+                  variant="outlined"
+                >
+                  Ir para Contatos
+                </Button>
+              }
+            />
+          }
+        >
+          <MessageComposer contacts={contacts} />
+        </ListState>
+      </div>
 
       <section aria-labelledby="messages-title">
         <Typography id="messages-title" variant="subtitle1" component="h2">
