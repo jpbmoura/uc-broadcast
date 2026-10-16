@@ -1,9 +1,7 @@
-import { createTheme } from '@mui/material/styles'
+import { createTheme } from "@mui/material/styles";
+import { ptBR } from "@mui/material/locale";
 
-export const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#1976d2',
-    },
-  },
-})
+export const theme = createTheme(
+  { palette: { primary: { main: "#2563eb" } } },
+  ptBR,
+);

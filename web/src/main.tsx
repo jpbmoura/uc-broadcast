@@ -11,6 +11,7 @@ import "./index.css";
 import App from "./App.tsx";
 import { BrowserRouter } from "react-router";
 import { AuthProvider } from "./features/auth/auth-provider.tsx";
+import { NotifyProvider } from "./components/feedback/notify-provider.tsx";
 
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
@@ -21,7 +22,9 @@ createRoot(document.getElementById("root")!).render(
         <LocalizationProvider dateAdapter={AdapterDayjs} adapterLocale="pt-br">
           <BrowserRouter>
             <AuthProvider>
-              <App />
+              <NotifyProvider>
+                <App />
+              </NotifyProvider>
             </AuthProvider>
           </BrowserRouter>
         </LocalizationProvider>
