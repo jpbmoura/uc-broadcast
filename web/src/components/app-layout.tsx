@@ -1,4 +1,3 @@
-// components/AppLayout.tsx
 import { AppBar, Avatar, Button, Toolbar, Typography } from "@mui/material";
 import { Link as RouterLink, Outlet } from "react-router";
 import { signOut } from "../features/auth/api";

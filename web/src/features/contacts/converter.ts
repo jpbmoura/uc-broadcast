@@ -1,4 +1,3 @@
-// features/contacts/converter.ts
 import type { FirestoreDataConverter } from "firebase/firestore";
 import { toDate } from "../../lib/dates";
 import type { Contact } from "../../types/contact";

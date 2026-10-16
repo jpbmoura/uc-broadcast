@@ -18,8 +18,8 @@ import { createContact, updateContact } from "../api";
 import { contactSchema, type ContactValues } from "../schemas";
 
 type Props = {
-  contact: Contact | null; // null = criar
-  contacts: Contact[]; // contatos atuais da conexão, para checar telefone repetido
+  contact: Contact | null;
+  contacts: Contact[];
   onClose: () => void;
 };
 

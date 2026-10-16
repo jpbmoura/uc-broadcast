@@ -1,4 +1,3 @@
-// features/auth/api.ts
 import { FirebaseError } from "firebase/app";
 import {
   createUserWithEmailAndPassword,
