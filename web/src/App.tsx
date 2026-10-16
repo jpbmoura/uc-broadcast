@@ -1,12 +1,5 @@
-import Button from '@mui/material/Button'
+import { AppRoutes } from "./routes/app-routes";
 
-const App = () => (
-  <div className="flex min-h-screen items-center justify-center gap-4">
-    <Button variant="contained">MUI</Button>
-    <Button variant="outlined" className="rounded-full px-8">
-      MUI + Tailwind
-    </Button>
-  </div>
-)
+const App = () => <AppRoutes />;
 
-export default App
+export default App;
